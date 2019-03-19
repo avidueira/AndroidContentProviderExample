@@ -2,11 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alfredo.myapplication1">
 
-    <permission android:name="com.alfredo.myapps.READ_DATABASE" android:protectionLevel="normal" />
-    <permission android:name="com.alfredo.myapps.WRITE_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.alfredo.myapps1.READ_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.alfredo.myapps1.WRITE_DATABASE" android:protectionLevel="normal" />
 
-    <uses-permission android:name="com.alfredo.myapps.READ_DATABASE" />
-    <uses-permission android:name="com.alfredo.myapps.WRITE_DATABASE" />
+    <uses-permission android:name="com.alfredo.myapps1.READ_DATABASE" />
+    <uses-permission android:name="com.alfredo.myapps1.WRITE_DATABASE" />
+
+    <uses-permission android:name="com.alfredo.myapps2.READ_DATABASE" />
+    <uses-permission android:name="com.alfredo.myapps2.WRITE_DATABASE" />
+
+    <uses-permission android:name="com.alfredo.myapps3.READ_DATABASE" />
+    <uses-permission android:name="com.alfredo.myapps3.WRITE_DATABASE" />
 
     <application
         android:allowBackup="true"
@@ -23,11 +29,11 @@
             </intent-filter>
         </activity>
         <provider
-            android:authorities="com.alfredo.myapps"
+            android:authorities="com.alfredo.myapps1"
             android:name="com.alfredo.myapplication1.ExampleProvider"
             android:exported="true"
-            android:readPermission="com.alfredo.myapps.READ_DATABASE"
-            android:writePermission="com.alfredo.myapps.WRITE_DATABASE"></provider>
+            android:readPermission="com.alfredo.myapps1.READ_DATABASE"
+            android:writePermission="com.alfredo.myapps1.WRITE_DATABASE"></provider>
     </application>
 
 </manifest>

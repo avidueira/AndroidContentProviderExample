@@ -1,4 +1,4 @@
-package com.alfredo.myapplication1;
+package com.alfredo.myapplication2;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,7 +8,7 @@ import android.util.Log;
 public class ExampleDatabase extends SQLiteOpenHelper {
 
     private static final String TAG = "ASDF";
-    private static final int DB_VERSION = 4;
+    private static final int DB_VERSION = 5;
     private static final String DB_NAME = "example_data";
 
     public static final String TABLE_SHARED = "shared";

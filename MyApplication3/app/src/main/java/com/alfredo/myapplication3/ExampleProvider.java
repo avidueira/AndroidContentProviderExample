@@ -1,4 +1,4 @@
-package com.alfredo.myapplication1;
+package com.alfredo.myapplication3;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -14,7 +14,7 @@ import android.util.Log;
 
 public class ExampleProvider extends ContentProvider {
 
-    private static final String AUTHORITY = "com.alfredo.myapps1";
+    private static final String AUTHORITY = "com.alfredo.myapps3";
     private static final String SHARED_BASE_PATH = "shared";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + SHARED_BASE_PATH);
 

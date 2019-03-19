@@ -1,5 +1,6 @@
-package com.alfredo.myapplication2;
+package com.alfredo.myapplication3;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         loadData();
+        saveContent("content://com.alfredo.myapps1/shared", "prueba desde app3");
     }
 
     private void loadData() {
@@ -44,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             }
             cursor.close();
         }
+    }
+
+    private void saveContent(String contentProvider, String value) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("value", value);
+        getContentResolver().insert(Uri.parse(contentProvider), contentValues);
+        getContent(contentProvider);
     }
 
     private void log(String message) {
